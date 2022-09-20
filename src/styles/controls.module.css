@@ -1,0 +1,102 @@
+.controls {
+  font-size: 1rem;
+  position: fixed;
+  bottom: 5.35rem;
+  right: 0;
+  height: 6rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  margin: 0;
+  color: white;
+  z-index: 10000;
+  min-width: 22rem;
+  padding: 0;
+  padding-left: 4rem;
+}
+.controls:not(.parameters) div {
+  height: 100%;
+  width: 4rem;
+  margin: 0;
+  margin-top: 1rem;
+  padding: 0;
+}
+.controls > img:first-child {
+  margin-right: 0.8rem;
+}
+.progress {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding-top: 1rem;
+  margin-right: 1rem;
+}
+.progress progress {
+  appearance: none;
+  width: 100%;
+  margin-right: 0.5rem;
+}
+.progress progress[value]::-webkit-progress-bar {
+  background-color: black;
+  border-radius: 1rem;
+  border: 1px solid white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+.progress progress[value]::-webkit-progress-value {
+  background-color: white;
+  border-radius: 1rem;
+}
+.progress p {
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+@keyframes redder {
+  0% {
+    background-color: red;
+  }
+  50% {
+    background-color: #711818;
+  }
+  100% {
+    background-color: red;
+  }
+}
+.recIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.8rem;
+  margin: 1rem;
+  width: 2rem;
+  height: 2rem;
+  position: fixed;
+  top: 56.5rem;
+  right: 2rem;
+  border-radius: 50%;
+  animation: redder 3s infinite;
+}
+.recIcon > button {
+  animation: redder 1s infinite;
+}
+
+.parameters {
+  left: 5px;
+  width: 70%;
+  justify-content: space-around;
+}
+.parameter {
+  min-width: 15%;
+}
+.parameter > label,
+.parameter > label > * {
+  width: 100%;
+}
+.parameter p {
+  margin: 0;
+  text-align: center;
+}

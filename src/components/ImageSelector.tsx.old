@@ -1,0 +1,41 @@
+import React, { useCallback } from "react";
+import { FormattedMessage } from "react-intl";
+import { useParams } from "react-router-dom";
+import { useRecoilState } from "recoil";
+import { imagesByScene } from "../state";
+import styles from "../styles/input.module.css";
+
+const ImageSelector: React.FC = () => {
+  const { scene } = useParams<{ scene: string }>();
+  const [images, setImages] = useRecoilState(imagesByScene(scene));
+  const onSubmitFile = useCallback<React.ChangeEventHandler<HTMLInputElement>>(
+    (event) => {
+      const { files = [] } = event.target;
+      if (!files?.length) return;
+      const newImages = [...files]
+        .sort((a, b) => (a.name < b.name ? 1 : -1))
+        .map((file) => URL.createObjectURL(file));
+      const oldImages = images.slice(newImages.length);
+      setImages([...newImages, ...oldImages]);
+    },
+    [images, setImages]
+  );
+
+  return (
+    <div style={{ display: "flex", textAlign: "center", height: "100%" }}>
+      <label className={styles["image-input"]}>
+        <input
+          multiple
+          type="file"
+          accept="image/png"
+          onChange={onSubmitFile}
+        />
+        <FormattedMessage tagName="strong" id="image.btn" />
+        <br />
+        <FormattedMessage tagName="small" id="image.desc" />
+      </label>
+    </div>
+  );
+};
+
+export default ImageSelector;

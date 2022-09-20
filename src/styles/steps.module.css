@@ -1,0 +1,171 @@
+@font-face {
+  font-family: "UniversNextProHeavy";
+  src: url(./fonts/UniversNextPro-HeavyCond.otf) format("opentype");
+}
+
+h1.panorama {
+  font-style: italic;
+  letter-spacing: 5px;
+  font-size: 7rem;
+  margin: 2rem 0;
+}
+.share .message {
+  margin-bottom: 25px;
+}
+.share .footer {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.share .actions {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.share .actions p {
+  margin: 0;
+  cursor: pointer;
+}
+.share .actions .link {
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.record .message {
+  margin-bottom: 3rem;
+}
+
+.credits {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: left;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.credits > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.credits > div:first-child {
+  max-width: 50%;
+  margin-right: 1rem;
+}
+
+.credits .authors {
+  padding-left: 1rem;
+}
+.credits h3 {
+  margin-top: 0;
+}
+.credits p {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.credits > div:first-child p {
+  margin-bottom: 25px;
+}
+.credits > div:first-child > p:last-child {
+  margin-bottom: 0;
+}
+
+.home {
+  width: 100%;
+  height: 1350px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: black;
+  justify-content: center;
+  padding: 1rem;
+}
+
+@media screen and max-width(3839px) {
+  .home {
+    height: 663px;
+  }
+}
+.home .scene {
+  width: 50%;
+  height: 50%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home .scene h1 {
+  padding-bottom: 1rem;
+  margin: 2rem;
+  font-style: italic;
+  font-size: 6rem;
+  border-bottom: 4px solid white;
+  font-family: UniversNextProHeavy;
+}
+.home .scene p {
+  margin: 0;
+  font-size: 1rem;
+}
+.home .scene button {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  width: 8rem;
+  outline: none;
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 1rem;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.play {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 60%;
+}
+.play > div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 8rem;
+}
+.play > div > img {
+  flex-grow: 1;
+  max-height: 5rem;
+  max-width: 3rem;
+  margin-bottom: 1rem;
+}
+
+.nextBtn {
+  /* position: absolute;
+  bottom: 480px;
+  left: 1720px; */
+  position: relative;
+  top: 20px;
+  left: 50px;
+  z-index: 120;
+  background-color: rgba(0, 0, 0, 0.65);
+  color: white;
+  font-size: 2.5rem;
+  font-family: UniversNextPro;
+  border: 1px solid white;
+  padding: 0.5rem 2rem;
+}

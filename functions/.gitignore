@@ -1,0 +1,14 @@
+# Compiled JavaScript files
+lib/**/*.js
+lib/**/*.js.map
+
+# TypeScript v1 declaration files
+typings/
+
+# Node.js dependency directory
+node_modules/
+
+# Audio and video files
+*.mp3
+*.mp4
+*.webm
